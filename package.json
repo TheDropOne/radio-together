@@ -1,0 +1,22 @@
+{
+  "name": "radio-together",
+  "version": "0.0.1",
+  "description": "Listen to the music with your friends!",
+  "main": "index.js",
+  "scripts": {
+    "develop": "docker-compose up --build",
+    "test": "",
+    "connect": "./.bin/connect.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilyanich/radio-together.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danilyanich/radio-together/issues"
+  },
+  "homepage": "https://github.com/danilyanich/radio-together#readme",
+  "dependencies": {}
+}

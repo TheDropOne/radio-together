@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+
+  database:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - /var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - '3306:3306'
+
+  api:
+    image: api:latest
+    build:
+      context: ./api
+    volumes:
+      - ./api/src:/app/src
+      - ~/.cache/yarn/v4:/usr/local/share/.cache/yarn/v4 # persist yarn cache
+    ports:
+      - '3000:3000'
+    depends_on:
+      - database
