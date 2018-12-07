@@ -12,6 +12,20 @@ let baseConfig = {
   api: {
     port: 3000,
   },
+  signale: {
+    coloredInterpolation: false,
+    displayScope: false,
+    displayBadge: false,
+    displayDate: false,
+    displayFilename: false,
+    displayLabel: false,
+    displayTimestamp: false,
+    underlineLabel: false,
+    underlineMessage: false,
+    underlinePrefix: false,
+    underlineSuffix: false,
+    uppercaseLabel: false,
+  },
 };
 
 const loadConfig = (name) => {
@@ -21,9 +35,10 @@ const loadConfig = (name) => {
     const config = require(pathToConfig); // eslint-disable-line
     baseConfig = deepmerge(baseConfig, config);
 
-    console.log(`Loaded ${name} config`);
+    console.config(baseConfig.signale);
+    console.info(`Loaded ${name} config`);
   } else {
-    console.log(`No ${name} config`);
+    console.warn(`No ${name} config`);
   }
 };
 
