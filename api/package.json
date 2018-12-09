@@ -4,12 +4,13 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
+    "start": "",
     "develop": "NODE_ENV=development NODE_PATH=src nodemon --watch src src/app.js",
     "test": "",
     "lint": "eslint src"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "5.9.0",
     "eslint-config-airbnb-base": "13.1.0",

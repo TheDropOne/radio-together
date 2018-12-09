@@ -8,6 +8,9 @@ case "$1" in
   "api")
     docker-compose exec api bash
     ;;
+  "app")
+    docker-compose exec app bash
+    ;;
   *)
     echo "No such service."
     exit 1

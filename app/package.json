@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_PATH=src parcel build --log-level=4 src/index.html",
+    "serve": "serve --debug --single dist",
+    "start": "yarn build && yarn serve",
+    "develop": "parcel --port 5000 --log-level=4 --hmr-port 8080 src/index.html",
+    "test": "",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "parcel-bundler": "1.10.3",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "serve": "10.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "babel-eslint": "10.0.1",
+    "babel-plugin-module-resolver": "3.1.1",
+    "eslint": "5.10.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1"
+  }
+}
