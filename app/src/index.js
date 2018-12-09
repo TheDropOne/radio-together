@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled from 'styled-components';
+
+const Header = styled.h1`
+  background-color: red;
+`;
 
 const App = () => (
-  <h1>Hello world!</h1>
+  <Header>Hello world!</Header>
 );
 
 ReactDOM.render(
