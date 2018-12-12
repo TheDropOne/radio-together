@@ -3,11 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import * as styles from 'constants/styles';
 
 export const Container = styled.article`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
   max-width: 110px;
   margin-right: 30px;
 `;
@@ -28,7 +23,7 @@ export const Image = styled.img`
 
   border-radius: 100vmax;
 
-  animation: ${spin} 15s linear ${() => Math.random().toFixed(2)}s infinite;
+  animation: ${spin} 15s linear ${() => (Math.random() * 2).toFixed(2)}s infinite;
 `;
 
 export const Title = styled.p`
@@ -37,6 +32,8 @@ export const Title = styled.p`
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
+
+  text-align: center;
 
   margin-top: 5px;
 

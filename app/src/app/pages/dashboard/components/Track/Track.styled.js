@@ -4,6 +4,12 @@ import { lighten } from 'polished';
 import * as styles from 'constants/styles';
 
 export const Container = styled.article`
+  border-radius: ${styles.borderRadius};
+  border: 1px solid ${styles.borderColor};
+  overflow: hidden;
+
+  cursor: pointer;
+
   display: flex;
 
   &:hover {
@@ -12,8 +18,8 @@ export const Container = styled.article`
 `;
 
 export const Image = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
 
   margin-right: 20px;

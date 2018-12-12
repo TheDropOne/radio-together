@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
+import { Link } from 'react-router-dom';
+
 import * as styles from 'constants/styles';
 
 export const Header = styled.header`
@@ -13,7 +15,9 @@ export const Header = styled.header`
   border-bottom: 1px solid ${styles.borderColor};
 `;
 
-export const Title = styled.h1`
+export const Title = styled(Link).attrs({
+  to: '/',
+})`
   font-weight: 300;
   font-size: ${styles.fontSizeHuge};
   letter-spacing: -2px;
@@ -47,12 +51,14 @@ export const Avatar = styled.img`
   border: 1px solid ${styles.borderColor};
 `;
 
-export const Profile = styled.a`
+export const Profile = styled(Link).attrs({
+  to: '/user/',
+})`
   display: flex;
   align-items: center;
 
   margin-left: auto;
 
   font-weight: normal;
-  font-size: ${styles.fontSizeMedium};
+  font-size: ${styles.fontSizeSmall};
 `;

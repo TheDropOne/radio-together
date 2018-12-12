@@ -4,8 +4,9 @@ import * as styles from 'constants/styles';
 
 export const Wrapper = styled.div`
   width: 100%;
+  color: ${styles.fontColor};
 
-  background-color: hsl(0, 0%, 90%);
+  background: linear-gradient(to bottom right, hsl(345, 40%, 50%) 0%, hsl(14, 70%, 70%) 100%);
 `;
 
 export const Main = styled.main`
